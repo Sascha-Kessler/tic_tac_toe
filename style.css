@@ -1,0 +1,42 @@
+table {
+  border-collapse: collapse;
+  margin: 20px auto;
+  table-layout: fixed;
+  width: 300px;
+  height: 300px;
+  font-family: system-ui, sans-serif;
+}
+
+td {
+  border: 3px solid #333;
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 48px;
+  font-weight: bold;
+  cursor: pointer;
+  user-select: none;
+  transition: background 0.2s;
+}
+
+td:hover {
+  background: #f0f0f0;
+}
+
+td:empty {
+  color: #999; /* Platzhalterfarbe für leere Felder */
+}
+
+td:nth-child(odd) {
+  /* optional: damit O und X verschiedenfarbig wirken können */
+}
+
+body {
+  background: #fafafa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
