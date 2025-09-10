@@ -9,8 +9,17 @@ body {
   padding: 0;
   display: flex;
   justify-content: center;
+  flex-direction: column;
   align-items: center;
   height: 100vh; /* damit das Board mittig auf der Seite steht */
+}
+
+h1 {
+  text-align: center;
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  margin-top: 40px;
+  margin-bottom: 20px;
 }
 
 table {
@@ -41,4 +50,11 @@ tr:not(:last-child) td {
 }
 td:not(:last-child) {
   border-right: 5px solid white;
+}
+
+#content {
+  flex-grow: 1;              /* nimmt den restlichen Platz ein */
+  display: flex;
+  justify-content: center;   /* Spielbrett horizontal zentrieren */
+  align-items: center;       /* Spielbrett vertikal zentrieren */
 }
