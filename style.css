@@ -1,14 +1,26 @@
+/* Google Font einbinden (falls nicht lokal vorhanden) */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+body {
+  background-color: #323232;
+  font-family: 'Open Sans', sans-serif;
+  color: white; /* falls du Text außerhalb der Tabelle hast */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* damit das Board mittig auf der Seite steht */
+}
+
 table {
   border-collapse: collapse;
-  margin: 20px auto;
   table-layout: fixed;
   width: 300px;
   height: 300px;
-  font-family: system-ui, sans-serif;
 }
 
 td {
-  border: 3px solid #333;
   width: 100px;
   height: 100px;
   text-align: center;
@@ -17,26 +29,16 @@ td {
   font-weight: bold;
   cursor: pointer;
   user-select: none;
-  transition: background 0.2s;
+  color: white;
 }
 
-td:hover {
-  background: #f0f0f0;
+/* Nur innere Trennlinien */
+td {
+  border: 0; /* Basis: keine Außenlinien */
 }
-
-td:empty {
-  color: #999; /* Platzhalterfarbe für leere Felder */
+tr:not(:last-child) td {
+  border-bottom: 5px solid white;
 }
-
-td:nth-child(odd) {
-  /* optional: damit O und X verschiedenfarbig wirken können */
-}
-
-body {
-  background: #fafafa;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
+td:not(:last-child) {
+  border-right: 5px solid white;
 }
