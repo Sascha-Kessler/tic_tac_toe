@@ -46,6 +46,13 @@ function render() {
   contentDiv.innerHTML = tableHTML;
 }
 
+function resetGame() {
+  fields = [null, null, null, null, null, null, null, null, null];
+  currentPlayer = 'circle';
+  gameOver = false;
+  render();
+}
+
 function handleClick(index, tdElement) {
   if (gameOver || fields[index] !== null) return;
 
